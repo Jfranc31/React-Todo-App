@@ -34,10 +34,10 @@ function ContactPage() {
     };
 
     return (
-        <Container className="mt-4">
+        <Container className="page-container">
             <Row className="justify-content-center">
                 <Col md={8}>
-                    <h1 className="mb-4">Contact Me</h1>
+                    <h1>Contact Me</h1>
 
                     {submitted && (
                         <Alert variant="success">
@@ -45,64 +45,66 @@ function ContactPage() {
                         </Alert>
                     )}
 
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group className="mb-3">
-                            <Form.Label>First Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="firstname"
-                                value={formData.firstname}
-                                onChange={handleInputChange}
-                                placeholder="Enter your first name"
-                                required
-                            />
-                        </Form.Group>
+                    <div className="contact-form">
+                        <Form onSubmit={handleSubmit}>
+                            <Form.Group className="mb-3">
+                                <Form.Label>First Name</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="firstname"
+                                    value={formData.firstname}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your first name"
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Label>Last Name</Form.Label>
-                            <Form.Control
-                                type="text"
-                                name="lastname"
-                                value={formData.lastname}
-                                onChange={handleInputChange}
-                                placeholder="Enter your last name"
-                                required
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Last Name</Form.Label>
+                                <Form.Control
+                                    type="text"
+                                    name="lastname"
+                                    value={formData.lastname}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your last name"
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                placeholder="Enter your email"
-                                required
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control
+                                    type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Form.Group className="mb-3">
-                            <Form.Label>Comments</Form.Label>
-                            <Form.Control
-                                as="textarea"
-                                rows={4}
-                                name="comments"
-                                value={formData.comments}
-                                onChange={handleInputChange}
-                                placeholder="Enter your comments"
-                                required
-                            />
-                        </Form.Group>
+                            <Form.Group className="mb-3">
+                                <Form.Label>Comments</Form.Label>
+                                <Form.Control
+                                    as="textarea"
+                                    rows={4}
+                                    name="comments"
+                                    value={formData.comments}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter your comments"
+                                    required
+                                />
+                            </Form.Group>
 
-                        <Button variant="primary" type="submit" size="lg">
-                            Submit
-                        </Button>
-                    </Form>
+                            <Button variant="primary" type="submit" size="lg">
+                                Submit
+                            </Button>
+                        </Form>
+                    </div>
                 </Col>
             </Row>
         </Container>
     );
-}
+};
 
 export default ContactPage;

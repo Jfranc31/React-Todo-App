@@ -35,6 +35,6 @@ function TodoForm() {
             </InputGroup>
         </Form>
     );
-}
+};
 
 export default TodoForm;

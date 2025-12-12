@@ -14,7 +14,7 @@ function TodoItem({ todo }) {
     };
 
     return (
-        <ListGroup.Item className="d-flex align-items-center justify-content-between">
+        <ListGroup.Item className="d-flex align-items-center justify-content-between todo-item-custom">
             <div className="d-flex align-items-center">
                 <Form.Check
                     type="checkbox"
@@ -22,9 +22,7 @@ function TodoItem({ todo }) {
                     onChange={handleToggle}
                     className="me-3"
                 />
-                <span style={{ textDecoration: todo.completed ? "line-through" : "none",
-                    color: todo.completed ? "gray" : "black"
-                 }}>
+                <span className={todo.completed ? 'todo-text-completed' : ''}>
                     {todo.text}
                 </span>
             </div>
@@ -33,6 +31,6 @@ function TodoItem({ todo }) {
             </Button>
         </ListGroup.Item>
     );
-}
+};
 
 export default TodoItem;

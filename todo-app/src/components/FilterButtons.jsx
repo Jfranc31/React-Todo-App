@@ -35,6 +35,6 @@ function FilterButtons() {
             </ButtonGroup>
         </div>
     );
-}
+};
 
 export default FilterButtons;

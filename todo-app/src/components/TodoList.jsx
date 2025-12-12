@@ -15,7 +15,7 @@ function TodoList() {
 
     if (filteredTodos.length === 0) {
         return <p className="text-muted">No todos to display.</p>;
-    }
+    };
 
     return (
         <ListGroup>

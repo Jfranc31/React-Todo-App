@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     return (
-        <BootstrapNavbar bg='dark' variant='dark' expand='lg'>
+        <BootstrapNavbar bg='dark' variant='dark' expand='md'>
             <Container>
                 <BootstrapNavbar.Brand as={Link} to='/todos'>
                     Todo App
@@ -14,14 +14,14 @@ function Navbar() {
                         <Nav.Link as={Link} to='/todos'>
                             Todos
                         </Nav.Link>
-                        <Nav.Link as={Link} to='/about'>
-                            About
+                        <Nav.Link as={Link} to='/contact'>
+                            Contact
                         </Nav.Link>
                     </Nav>
                 </BootstrapNavbar.Collapse>
             </Container>
         </BootstrapNavbar>
     );
-}
+};
 
 export default Navbar;

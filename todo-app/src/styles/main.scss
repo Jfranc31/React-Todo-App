@@ -1,0 +1,178 @@
+// variables
+$primary-color: #3498db;
+$secondary-color: #2c3e50;
+$success-color: #27ae60;
+$danger-color: #e74c3c;
+$text-dark: #2c3e50;
+$text-muted: #7f8c8d;
+$background-light: #ecf0f1;
+$border-radius: 8px;
+$box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+// Breakpoints
+$mobile: 576px;
+
+// global styles
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.App {
+    min-height: 100vh;
+}
+
+// page container
+.page-container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    // Mobile responsive
+    @media (max-width: $mobile) {
+        padding: 1rem;
+    }
+}
+
+// custom heading styles
+h1 {
+    color: $secondary-color;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+
+    // Mobile responsive
+    @media (max-width: $mobile) {
+        font-size: 1.75rem;
+    }
+}
+
+h4 {
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: 1rem;
+
+    // Mobile responsive
+    @media (max-width: $mobile) {
+        font-size: 1.25rem;
+    }
+}
+
+h5 {
+    color: $text-dark;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+
+    // Mobile responsive
+    @media (max-width: $mobile) {
+        font-size: 1rem;
+    }
+}
+
+// Todo item custom styles
+.todo-item-custom {
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $background-light;
+        transform: translateY(5px);
+    }
+
+    // Mobile responsive
+    @media (max-width: $mobile) {
+        padding: 0.75rem;
+
+        &:hover {
+            transform: none;
+        }
+    }
+
+    .btn-sm {
+        @media (max-width: $mobile) {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.5rem;
+        }
+    }
+}
+
+// completed todo text
+.todo-text-completed {
+    text-decoration: line-through;
+    color: $text-muted;
+}
+
+// filter buttons container
+.filter-section {
+    padding: 1.5rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @media (max-width: $mobile) {
+        padding: 1rem;
+    }
+
+    .btn-group {
+        @media (max-width: $mobile) {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            .btn {
+                border-radius: $border-radius;
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+
+// Form section
+.form-section {
+    padding: 1.5rem;
+    background: white;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @media (max-width: $mobile) {
+        padding: 1rem;
+    }
+}
+
+// Contact form styles
+.contact-form {
+    background: white;
+    padding: 2rem;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+
+    @media (max-width: $mobile) {
+        padding: 1rem;
+    }
+
+    .form-label {
+        font-weight: 600;
+        color: $text-dark;
+    }
+
+    .btn-lg {
+        @media (max-width: $mobile) {
+            width: 100%;
+        }
+    }
+}
+
+.input-group {
+    @media (max-width: $mobile) {
+        flex-direction: column;
+
+        .form-control {
+            border-radius: $border-radius;
+            margin-bottom: 0.5rem;
+            width: 100%;
+        }
+
+        .btn {
+            border-radius: $border-radius;
+            width: 100%;
+        }
+    }
+}

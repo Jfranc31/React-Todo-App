@@ -5,19 +5,23 @@ import FilterButtons from "../components/FilterButtons";
 
 function TodosPage() {
     return (
-        <Container className="mt-4">
-            <h1 className="mb-4">My Todos</h1>
-            <Row>
-                <Col md={6}>
-                    <h4>Add New Todo</h4>
-                    <TodoForm />
+        <Container className="page-container">
+            <h1>My Todos</h1>
+            <Row className="mb-4">
+                <Col md={6} className="mb-3 mb-md-0">
+                    <div className="form-section">
+                        <h4>Add New Todo</h4>
+                        <TodoForm />
+                    </div>
                 </Col>
                 <Col md={6}>
-                    <FilterButtons />
+                    <div className="filter-section">
+                        <FilterButtons />
+                    </div>
                 </Col>
             </Row>
 
-            <Row className="mt-4">
+            <Row>
                 <Col md={12}>
                     <h4>Todo List</h4>
                     <TodoList />
@@ -25,6 +29,6 @@ function TodosPage() {
             </Row>
         </Container>
     );
-}
+};
 
 export default TodosPage;
