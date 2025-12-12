@@ -9,9 +9,10 @@ function App() {
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Navigate to="/todos" replace />} />
+        <Route path="/" element={<TodosPage/>} />
         <Route path="/todos" element={<TodosPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   );
